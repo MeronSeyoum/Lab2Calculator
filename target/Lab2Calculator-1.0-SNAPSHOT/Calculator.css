@@ -1,0 +1,38 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 17-Jan-2022, 6:53:42 PM
+    Author     : merya
+*/
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+div.main{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%; 
+    padding: 10px;
+    text-align: center;
+}
+input[type=number] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+button{
+     margin: 10px 0;
+    width:20%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;}
