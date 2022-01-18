@@ -1,4 +1,5 @@
-package com.mycompany.lab2calculator.servlets;
+package ca.sait.lab2calculator.servlets;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -23,7 +24,7 @@ public class AgeCalculatorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request, response);
     }
 
     /**
@@ -37,9 +38,22 @@ getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(r
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request, response);
- 
+
+        if (request.getParameter("age") == null || request.getParameter("age").isEmpty()) {
+          request.setAttribute("message", "You must give your current age"); 
+        } else {
+             try {
+                String ageInString = request.getParameter("age");
+                int age = Integer.parseInt(ageInString);
+
+                int nextBirthdayAge = age + 1;
+
+                request.setAttribute("message", "Your Age Next Birthday Will be " + nextBirthdayAge);
+            } catch (NumberFormatException ex) {
+                request.setAttribute("message", "You must enter a number");
+            }
+        }
+        getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request, response);
     }
 
-   
 }
