@@ -1,7 +1,7 @@
 <%-- 
     Document   : agecalculator
     Created on : 17-Jan-2022, 8:38:37 PM
-    Author     : merya
+    Author     : Meron Seyoum
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,9 +9,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Age Calculator</title>
+         <link rel="stylesheet"   type="text/css" href="Style/Calculator.css">
+         <title>Age Calculator</title>
     </head>
     <body>
-        <h1>Age Calculator</h1>
+      <div class="main">
+            <h1>Age Calculator</h1> 
+
+            <form action="age" method="post">
+                <label for="age">Enter Your Age:</label>
+                <input type="text" name="age" id="age"/>
+                <button>Age Next Birthday?</button>
+                <p> ${message}</p>
+                <a href="#">Arithmetic Calculator</a>
+            </form>
+        </div>
+
     </body>
 </html>
