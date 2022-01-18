@@ -19,7 +19,7 @@ div.main{
     padding: 10px;
     text-align: center;
 }
-input[type=number] {
+input[type=text] {
     width: 20%;
     padding: 12px 20px;
     margin: 10px 0;
@@ -35,4 +35,5 @@ button{
     display: block;
     margin-right: auto;
     margin-left: auto;
-    text-align: center;}
+    text-align: center;
+}
