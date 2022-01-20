@@ -12,27 +12,36 @@ body{
     width: 100%;
 }
 div.main{
-    display: flex;
-    flex-direction: column;
+    float: none;
+    display: inline-block;
+    vertical-align: middle; 
     margin: auto;
-    width: 50%; 
+    width: 60%; 
     padding: 10px;
     text-align: center;
 }
 input[type=text] {
-    width: 20%;
+    width: 30%;
     padding: 12px 20px;
     margin: 10px 0;
     box-sizing: border-box;
     text-align: center;
-    display: block;
+    display: inline-block;
     margin-right: auto;
     margin-left: auto;
 }
 button{
      margin: 10px 0;
+    width:10%;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+button.next{
+     margin: 10px 0;
     width:20%;
-    display: block;
+    display: inline-block;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
