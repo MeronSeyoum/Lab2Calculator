@@ -54,20 +54,22 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                 if (request.getParameter("addition") != null) {
                     result = first + second;
                     arithmetic = "+";
-                }else if (request.getParameter("subtraction") != null) {
+                } else if (request.getParameter("subtraction") != null) {
                     result = first - second;
                     arithmetic = "-";
-                }else if (request.getParameter("multiplication") != null) {
+                } else if (request.getParameter("multiplication") != null) {
                     result = first * second;
                     arithmetic = "*";
-                }else if (request.getParameter("division") != null  ) {
-if(second==0){ request.setAttribute("message", "You must enter a non Zero number");}
-                    result = first / second;
-                    arithmetic = "%";
+                } else if (request.getParameter("division") != null) {
+                    if (second == 0) {
+                        request.setAttribute("message", "You must enter a non Zero number");
+                    } else {
+                        result = first / second;
+                        arithmetic = "%";
+                    }
                 }
-   
 
-                request.setAttribute("message","Result : "+first+" " +arithmetic +" "+second +" = "+ result);
+                request.setAttribute("message", "Result : " + first + " " + arithmetic + " " + second + " = " + result);
             } catch (NumberFormatException ex) {
                 request.setAttribute("message", "You must enter a number");
             }
